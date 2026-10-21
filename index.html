@@ -98,6 +98,7 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
 .doc h3{margin:18px 0 6px;font-size:15.5px;color:var(--green2)}
 .doc h3:first-child{margin-top:0}
 .doc p{margin:0 0 8px;font-size:14.5px}
+.doc a{color:var(--green2)}
 #cover{position:fixed;inset:0;z-index:50;background:var(--green);color:#f7f5f0;
   display:flex;align-items:center;justify-content:center;padding:32px 20px;overflow:auto}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) #cover{background:#16231e;color:var(--ink)}}
@@ -114,6 +115,10 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cov .enter{background:var(--green);color:#16231e}}
 :root[data-theme="dark"] .cov .enter{background:var(--green);color:#16231e}
 .cov .enter:hover{opacity:.9}
+.cov .dl{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.cov .dl a{font-size:14px;padding:8px 18px;border-radius:999px;text-decoration:none;
+  border:1px solid rgba(247,245,240,.55);color:inherit}
+.cov .dl a:hover{background:rgba(247,245,240,.12)}
 .cov .foot{font-size:13px;opacity:.8;margin-top:26px;line-height:1.9}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:var(--ink);color:var(--bg);
   padding:8px 16px;border-radius:6px;font-size:14px;z-index:20}
@@ -127,6 +132,7 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
     <div class="courses">建築設計　敷地計畫　建築構造<br>建築設備　環境控制系統　建築結構系統</div>
     <p class="note">四十九則提示詞，填空即可產生你自己的提問。<br><b>AI 可以幫你學會，不能代替你學會。</b></p>
     <button class="enter" id="enter">點選進入</button>
+    <div class="dl"><a href="student-manual.pdf" target="_blank" rel="noopener">學生版使用手冊 PDF</a><a href="teacher-manual.pdf" target="_blank" rel="noopener">教師版使用手冊 PDF</a></div>
     <div class="foot">學生請以 gm.cute.edu.tw 帳號登入 Gemini Pro 學術版使用<br>上傳作業成果前請刪除姓名與學號</div>
   </div>
 </section>
@@ -180,15 +186,17 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
     <p>每一則提示詞都標了一個位置，說明 AI 在這件事裡站在哪裡。<b>傳遞</b>：AI 提點你，給方向與清單，答案仍由你自己找。<b>夥伴</b>：AI 陪你做，與你一起完成一件不屬於課程目標的手段性工作。<b>殘留</b>：AI 走後你還會什麼，這一類用於驗收，AI 只負責提問與檢核，不提供答案。</p>
     <h3>三、每一則都有的一句話</h3>
     <p>各則末尾均載明：凡 AI 不確定的部分應直接標示為不確定，不得補足或臆測，並須告知應至何處查證。看到 AI 給出條號、數值或案例而未標示來源時，一律回頭自行查證。</p>
-    <h3>四、篩選與編號</h3>
+    <h3>四、使用手冊</h3>
+    <p>完整的操作說明與實際範例請見手冊：<a href="student-manual.pdf" target="_blank" rel="noopener">學生版使用手冊（PDF）</a>、<a href="teacher-manual.pdf" target="_blank" rel="noopener">教師版使用手冊（PDF）</a>。手冊內含一次完整的操作實例，包含填空內容、送出後的畫面，以及回覆末段的不確定事項與查證指南。</p>
+    <h3>五、篩選與編號</h3>
     <p>四組篩選皆可複選，任一組不點選即代表該組全部適用；四組都不點選就會列出全部提示詞。標示為共用的提示詞在任何科目之下都會出現。編號字首代表課程：S 共用、D 建築設計、P 敷地計畫、C 建築構造、E 建築設備、V 環境控制系統、T 建築結構系統。</p>
-    <h3>五、操作步驟</h3>
+    <h3>六、操作步驟</h3>
     <p>一、按「複製提示詞」，或按「填空後複製」逐格填寫。二、開啟一個新對話，每一則用一個新對話，避免前面的內容互相干擾。三、貼上送出。四、依 AI 的提問逐步回答，不要一次把所有資料倒進去。</p>
-    <h3>六、黃底方框的意思</h3>
+    <h3>七、黃底方框的意思</h3>
     <p>提示詞中以【　】標示之處，由你依自己的題目填入。填得越具體，回覆越有用。</p>
-    <h3>七、法規與數值</h3>
+    <h3>八、法規與數值</h3>
     <p>凡涉及法規條號、法定數值、價格的提示詞，一律設計為由 AI 列出「應該查什麼」，不由 AI 提供答案。各縣市土地使用分區管制要點不同，且模型對條號的錯誤率不低，查證責任在使用者本人。</p>
-    <h3>八、交出去之前</h3>
+    <h3>九、交出去之前</h3>
     <p>上傳作業成果前，刪除姓名、學號，以及照片、班級等可辨識個人的細節。課程大綱已載明作業成果可能在去識別化後交由 AI 協助閱讀與回饋。</p>
   </div>
 </section>
