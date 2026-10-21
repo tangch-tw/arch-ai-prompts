@@ -115,6 +115,8 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cov .enter{background:var(--green);color:#16231e}}
 :root[data-theme="dark"] .cov .enter{background:var(--green);color:#16231e}
 .cov .enter:hover{opacity:.9}
+.cov .device{font-size:14px;margin:0 0 18px;padding:8px 14px;display:inline-block;
+  border:1px solid rgba(247,245,240,.45);border-radius:8px;background:rgba(247,245,240,.08);letter-spacing:.5px}
 .cov .dl{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
 .cov .dl a{font-size:14px;padding:8px 18px;border-radius:999px;text-decoration:none;
   border:1px solid rgba(247,245,240,.55);color:inherit}
@@ -131,6 +133,7 @@ mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
     <h2>AI 提示詞生成器</h2>
     <div class="courses">建築設計　敷地計畫　建築構造<br>建築設備　環境控制系統　建築結構系統</div>
     <p class="note">四十九則提示詞，填空即可產生你自己的提問。<br><b>AI 可以幫你學會，不能代替你學會。</b></p>
+    <div class="device">建議使用電腦開啟，以獲得完整訊息</div>
     <button class="enter" id="enter">點選進入</button>
     <div class="dl"><a href="student-manual.pdf" target="_blank" rel="noopener">學生版使用手冊 PDF</a><a href="teacher-manual.pdf" target="_blank" rel="noopener">教師版使用手冊 PDF</a></div>
     <div class="foot">學生請以 gm.cute.edu.tw 帳號登入 Gemini Pro 學術版使用<br>上傳作業成果前請刪除姓名與學號</div>
